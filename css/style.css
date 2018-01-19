@@ -1,0 +1,32 @@
+@media screen and (max-width: 480px) {
+  .tablet,
+  .desktop,
+  .desktop-hd {
+    display: none;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1080px) {
+  .mobile,
+  .desktop,
+  .desktop-hd {
+    display: none;
+  }
+}
+@media screen and (min-width: 1080px) and (max-width: 1440px) {
+  .mobile,
+  .tablet,
+  .desktop-hd {
+    display: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .mobile,
+  .tablet,
+  .desktop {
+    display: none;
+  }
+}
+
+img {
+  width: 100%;
+}
