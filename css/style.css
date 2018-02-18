@@ -401,7 +401,7 @@ section.partenaires {
 section.contact {
   background: white;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   grid-template-rows: auto repeat(2, 1fr) repeat(2, .3fr) .5fr;
   font-family: var(--font-secondary);
   align-content: center;
