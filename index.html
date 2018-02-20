@@ -8,33 +8,32 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body id="top">
     <div class="frame" style="height: 300vh"></div>
     <div class="background-header"></div>
     <header>
-      <!-- <img src="image/background-header.jpg" alt="background image" class="background-header"> -->
       <nav class="menu">
         <div class="navigation-button _framed">
           <span>menu</span>
           <img src="image/ic_expand_more.svg" alt="expand icon">
         </div>
         <ul class="navigation-container -hidden">
-          <li class="navigation-container__item -hidden">
+          <a data-scroll href="#annonces" class="navigation-container__item -hidden">
             <img src="image/menu_icon_1.png" alt="menu icon">
             <p>annonces</p>
-          </li>
-          <li class="navigation-container__item -hidden">
+          </a>
+          <a data-scroll href="#droits" class="navigation-container__item -hidden">
             <img src="image/menu_icon_2.png" alt="menu icon">
             <p>droits</p>
-          </li>
-          <li class="navigation-container__item -hidden">
+          </a>
+          <a data-scroll href="#partenaires" class="navigation-container__item -hidden">
             <img src="image/menu_icon_3.png" alt="menu icon">
             <p>partenaires</p>
-          </li>
-          <li class="navigation-container__item -hidden">
+          </a>
+          <a data-scroll href="#contact" class="navigation-container__item -hidden">
             <img src="image/menu_icon_4.png" alt="menu icon">
             <p>contact</p>
-          </li>
+          </a>
         </ul>
       </nav>
       <div class="life-selling _framed">
@@ -51,7 +50,7 @@
         <img src="image/discover-arrow.png" alt="icon discover arrow down">
       </div>
     </header>
-    <section class="annonces">
+    <section id="annonces">
       <p class="__title section-title">Nos Annonces</p>
       <a href="#annonces_all" class="_tiny">afficher ></a>
       <div class="nav-button _left _off"></div>
@@ -81,7 +80,7 @@
       </div>
       <a href="#">Tout afficher (plus de 100) ></a>
     </section>
-    <section class="droits">
+    <section id="droits">
       <div class="filter"></div>
       <div class="content">
         <p>Nous accompagnons des re-preneurs dans leur projet d’acquisition de commerces.Nous préparons et instruisons officiellement les dossiers avec les mairies, les banques et les institutions.</p>
@@ -91,10 +90,10 @@
         </a>
       </div>
     </section>
-    <section class="partenaires">
+    <section id="partenaires">
       <p class="section-title">Nos Partenaires</p>
     </section>
-    <section class="contact">
+    <section id="contact">
       <p class="section-title">Contact</p>
       <div class="contact-input __add">
         <div class="contact-input__button _framed" data-type="add">
@@ -117,11 +116,11 @@
       </div>
     </section>
 
-    <div class="button-to-top _framed -hidden">
+    <a data-scroll href="#top" class="button-to-top _framed -hidden">
       <img src="image/ic_expand_more.svg" alt="">
-    </div>
+    </a>
 
-    <span class="signature">adbrtweb</span>
+    <a href="http://github.com/mheaus" class="signature">adbrtweb</a>
 
     <script type="text/javascript">
       const menuButton = document.querySelector('.navigation-button');
@@ -204,22 +203,15 @@
         }
       };
 
-
       window.onscroll = function(e) {
         frameHeight();
         displayButtonToTop();
       };
 
-
-      const header = document.querySelector('header');
-
-      function resizeHeader() {
-        header.style.height = html.clientHeight + "px";
-      };
-
-      // resizeHeader();
-
     </script>
     <script type="text/javascript" src="js/smooth-scroll.min.js"></script>
+    <script>
+    	var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
   </body>
 </html>
