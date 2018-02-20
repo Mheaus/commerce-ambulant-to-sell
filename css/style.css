@@ -72,6 +72,19 @@ img {
   header {
     grid-template-rows: repeat(2, calc(23vh - .5rem)) repeat(3, 1fr) .2fr;
   }
+  .life-selling:first-of-type {
+    grid-row: span 2;
+  }
+  .life-selling:nth-of-type(2) {
+    grid-column: span 2;
+    margin: 1rem 2.5rem 0 2.5rem;
+  }
+  .discover {
+    color: var(--fonts-color);
+  }
+  .discover img.no-sm-white {
+    display: none;
+  }
   .background-header {
     height: 45vh;
   }
@@ -80,6 +93,28 @@ img {
 @media
   only screen and (min-width: 45em),
   only screen and (orientation: landscape) {
+    header {
+      height: 99vh;
+      grid-template-rows: repeat(2, 40vh) 1fr;
+    }
+    .life-selling:first-of-type {
+      grid-row: span 1;
+    }
+    .life-selling:nth-of-type(2) {
+
+    }
+    p.catchphrase {
+      display: none;
+    }
+    .discover {
+      color: white;
+    }
+    .discover:hover p {
+      color: white;
+    }
+    .discover img.sm-grey-only {
+      display: none;
+    }
     .background-header {
       height: 100vh;
     }
@@ -270,15 +305,10 @@ nav .navigation-container__item.-hidden p {
   font-size: 1.2rem;
 }
 .life-selling:first-of-type {
-  grid-row: span 2;
   flex-grow: 1;
 }
 .life-selling:first-of-type hr {
   width: 60%;
-}
-.life-selling:nth-of-type(2) {
-  grid-column: span 2;
-  margin: 1rem 2.5rem 0 2.5rem;
 }
 
 ._bold {
@@ -297,7 +327,6 @@ nav .navigation-container__item.-hidden p {
   grid-column: span 2;
   font-family: Open Sans;
   text-align: center;
-  color: var(--fonts-color);
   opacity: .9;
   margin-top: 0;
   transition: all .2s;
@@ -310,7 +339,7 @@ nav .navigation-container__item.-hidden p {
   width: 2.2rem;
 }
 .discover:hover {
-  color: var(--fonts-color);
+  color: inherit;
   opacity: .75;
 }
 .discover:active {
