@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Commerce Ambulant à Vendre</title>
     <link rel="icon" href="image/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
@@ -9,8 +10,9 @@
   </head>
   <body>
     <div class="frame" style="height: 300vh"></div>
+    <div class="background-header"></div>
     <header>
-      <img src="image/background-header.jpg" alt="background image" class="background-header">
+      <!-- <img src="image/background-header.jpg" alt="background image" class="background-header"> -->
       <nav class="menu">
         <div class="navigation-button _framed">
           <span>menu</span>
@@ -127,6 +129,7 @@
       const menuItems = document.querySelectorAll('.navigation-container__item');
 
       function displayMenu(e) {
+        this.classList.toggle('active')
         if (menuContainer.classList.contains('-hidden')) {
           menuContainer.classList.toggle('-hidden');
           window.setTimeout(function(){
@@ -181,8 +184,8 @@
 
       inputButtons.forEach(button =>  button.addEventListener('click', expandInput));
 
-      window.onscroll = function(e) {
-        // frameHeight
+
+      function frameHeight() {
         let height = Math.max(
           body.scrollHeight,
           body.offsetHeight,
@@ -191,7 +194,9 @@
           html.offsetHeight
         );
         frame.style.height=`${height}px`;
-        // hide go-to-top
+      };
+
+      function displayButtonToTop() {
         if (isInViewport(lifeSelling2)) {
           buttonToTop.classList.add('-hidden');
         } else {
@@ -200,6 +205,21 @@
       };
 
 
+      window.onscroll = function(e) {
+        frameHeight();
+        displayButtonToTop();
+      };
+
+
+      const header = document.querySelector('header');
+
+      function resizeHeader() {
+        header.style.height = html.clientHeight + "px";
+      };
+
+      // resizeHeader();
+
     </script>
+    <script type="text/javascript" src="js/smooth-scroll.min.js"></script>
   </body>
 </html>
