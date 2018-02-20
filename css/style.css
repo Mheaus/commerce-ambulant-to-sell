@@ -239,8 +239,9 @@ nav .navigation-container__item.-hidden img {
 }
 nav .navigation-container__item p {
   color: white;
+  font-size: 1.25em;
   padding-bottom: .75rem;
-  max-width: 6rem;
+  max-width: 8em;
   transition: all .5s;
   transition-timing-function: ease-in-out;
   overflow: hidden;
