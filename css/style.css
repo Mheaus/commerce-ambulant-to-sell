@@ -297,6 +297,10 @@ nav .navigation-container__item.-hidden p {
   grid-column: span 2;
   font-family: Open Sans;
   text-align: center;
+  color: var(--fonts-color);
+  opacity: .9;
+  margin-top: 0;
+  transition: all .2s;
 }
 .discover p {
   font-size: 1.5rem;
@@ -304,6 +308,14 @@ nav .navigation-container__item.-hidden p {
 .discover img {
   margin: .5rem;
   width: 2.2rem;
+}
+.discover:hover {
+  color: var(--fonts-color);
+  opacity: .75;
+}
+.discover:active {
+  opacity: 1;
+  margin-top: 2px;
 }
 
 /* ANNONCES */
