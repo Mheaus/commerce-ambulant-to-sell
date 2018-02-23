@@ -18,19 +18,19 @@
           <img src="image/ic_expand_more.svg" alt="expand icon">
         </div>
         <ul class="navigation-container -hidden">
-          <a data-scroll href="#annonces" class="navigation-container__item -hidden">
+          <a onclick="youScroll.to('#annonces').start()" class="navigation-container__item -hidden">
             <img src="image/menu_icon_1.png" alt="menu icon">
             <p>annonces</p>
           </a>
-          <a data-scroll href="#droits" class="navigation-container__item -hidden">
+          <a onclick="youScroll.to('#droits').start()" class="navigation-container__item -hidden">
             <img src="image/menu_icon_2.png" alt="menu icon">
             <p>droits</p>
           </a>
-          <a data-scroll href="#partenaires" class="navigation-container__item -hidden">
+          <a onclick="youScroll.to('#partenaires').start()" class="navigation-container__item -hidden">
             <img src="image/menu_icon_3.png" alt="menu icon">
             <p>partenaires</p>
           </a>
-          <a data-scroll href="#contact" class="navigation-container__item -hidden">
+          <a onclick="youScroll.to('#contact').start()" class="navigation-container__item -hidden">
             <img src="image/menu_icon_4.png" alt="menu icon">
             <p>contact</p>
           </a>
@@ -54,29 +54,72 @@
     <section id="annonces">
       <p class="__title section-title">Nos Annonces</p>
       <a href="#annonces_all" class="_tiny">afficher ></a>
-      <div class="nav-button _left _off"></div>
-      <div class="nav-button _right"></div>
-      <div class="annonces-container">
-        <div class="annonce-item" id="annonce-item1">
-          <img src="image/placeholder1.png" alt="photo annonce 1">
-          <div class="__info-container">
-            <p>Title</p>
-            <span>description de l'annonce de location de commerce ambulant très commune</span>
-          </div>
+      <div class="container-nav-annonce-items">
+        <div class="__button-more _left _off">
+          <svg width="13" height="19" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <path id="a" d="M2.174.447L9.25 7.413 16.326.447 18.5 2.59l-9.25 9.127L0 2.591z"/>
+            </defs>
+            <use stroke="#979797" xlink:href="#a" transform="rotate(90 6.259 6.259)"  fill-rule="evenodd"/>
+          </svg>
         </div>
-        <div class="annonce-item" id="annonce-item2">
-          <img src="image/placeholder2.png" alt="photo annonce 2">
-          <div class="__info-container">
-            <p>Title</p>
-            <span>description de l'annonce de location de commerce ambulant très commune</span>
-          </div>
+        <div class="annonces-container">
+          <a class="annonce-item" id="annonce-item1">
+            <img src="image/placeholder1.png" alt="photo annonce 1">
+            <div class="__info-container">
+              <span class="__location">Mérignac, 33</span>
+              <span class="__title">Stand de Fruits </span>
+              <p>8m de Stand tout equipé - Vente de fruits et légumes - pour couple - rak aluminium</p>
+            </div>
+          </a>
+          <a class="annonce-item" id="annonce-item2">
+            <img src="image/placeholder2.png" alt="photo annonce 2">
+            <div class="__info-container">
+              <span class="__location">Bordeaux, 33</span>
+              <span class="__title">Title</span>
+              <p>Vente de Café - Thé- Chocolat - Café en Grain , moulu , dosette - Stand entièrement equipé: Parasol,table...</p>
+            </div>
+          </a>
+          <a class="annonce-item" id="annonce-item3">
+            <img src="image/placeholder3.png" alt="photo annonce 3">
+            <div class="__info-container">
+              <span class="__location">Vendays M.., 33</span>
+              <span class="__title">Title</span>
+              <p>Sur Vendays Montalivet - Vente d'olives et condiments et fruits secs - Stand en dur ouvert 6jrs /7jrs</p>
+            </div>
+          </a>
+          <a class="annonce-item" id="annonce-item4">
+            <img src="image/placeholder1.png" alt="photo annonce 4">
+            <div class="__info-container">
+              <span class="__location">Mérignac, 33</span>
+              <span class="__title">Title</span>
+              <p>Vente de fruits et légumes - 8m de Stand tout equipé - Prêt a travailler - Balance aux normes /Barnum - Rak aluminium </p>
+            </div>
+          </a>
+          <a class="annonce-item" id="annonce-item5">
+            <img src="image/placeholder2.png" alt="photo annonce 5">
+            <div class="__info-container">
+              <span class="__location">Vendays M.., 33, 33</span>
+              <span class="__title">Title</span>
+              <p>Sur Vendays Montalivet - Vente d'olives et condiments et fruits secs - Stand en dur ouvert 6jrs /7jrs</p>
+            </div>
+          </a>
+          <a class="annonce-item" id="annonce-item6">
+            <img src="image/placeholder3.png" alt="photo annonce 6">
+            <div class="__info-container">
+              <span class="__location">Bordeaux, 33</span>
+              <span class="__title">Title</span>
+              <p>Vente de Café - Thé- Chocolat - Café en Grain , moulu , dosette - Stand entièrement equipé: Parasol,table...</p>
+            </div>
+          </a>
         </div>
-        <div class="annonce-item" id="annonce-item3">
-          <img src="image/placeholder3.png" alt="photo annonce 3">
-          <div class="__info-container">
-            <p>Title</p>
-            <span>description de l'annonce de location de commerce ambulant très commune</span>
-          </div>
+        <div class="__button-more _right">
+          <svg width="13" height="19" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <path id="a" d="M2.174.447L9.25 7.413 16.326.447 18.5 2.59l-9.25 9.127L0 2.591z"/>
+            </defs>
+            <use stroke="#979797" xlink:href="#a" transform="rotate(90 6.259 6.259)"  fill-rule="evenodd"/>
+          </svg>
         </div>
       </div>
       <a href="#">Tout afficher (plus de 100) ></a>
@@ -86,7 +129,7 @@
         <div class="filter"></div>
         <div class="content">
         <p>Nous accompagnons des re-preneurs dans leur projet d’acquisition de commerces.Nous préparons et instruisons officiellement les dossiers avec les mairies, les banques et les institutions.</p>
-        <a href="#droits" class="droits__button _framed">
+        <a href="#droits" class="__button _framed">
           <img src="image/rights_icon.svg" alt="">
           <span>Vos droits et Obligations ></span>
         </a>
@@ -98,11 +141,27 @@
     </section>
     <section id="contact">
       <p class="section-title">Contact</p>
-      <div class="contact-input __add">
+      <div class="contact-input __add -expand">
         <div class="contact-input__button _framed" data-type="add">
           <span>Vous voulez déposer une annonce ?</span>
           <img src="image/ic_expand_more.svg" alt="icon expand more">
         </div>
+        <form class="add-annonce" action="annonces#add">
+          <label for="title-add">Titre</label>
+          <input type="text" name="Titre" id="title-add" required placeholder="titre de votre annonce">
+          <label for="mail-add">Votre Email</label>
+          <input type="email" name="Titre" id="mail-add" required placeholder="email@email.com">
+          <label for="description-add">Description</label>
+          <textarea name="description" rows="8" required cols="80" id="description-add" placeholder="description de votre annonce" style="resize: none"></textarea>
+          <div class="name-group">
+            <label for="firstname-add">Prénom</label>
+            <label for="lastname-add">Nom</label>
+            <input type="text" name="firstname" id="firstname-add" required placeholder="Prénom">
+            <input type="text" name="lastname" id="lastname-add" required placeholder="Nom">
+          </div>
+          <label for="tel-add">Numéro de Télephone</label>
+          <input type="tel" name="phone number" id="tel-add">
+        </form>
       </div>
       <div class="contact-input __show">
         <div class="contact-input__button _framed" data-type="show">
@@ -113,13 +172,13 @@
       <a href="mailto:info@commerce-ambulant-à-vendre.com" class="contact__mail">info@commerce-ambulant-à-vendre.com</a>
       <a href="" class="contact__adress">adress, adress</br>00000, address</a>
       <a href="tel:+33678985647" class="contact__phone">0678985647</a>
-      <div class="contact__facebook">
+      <a href="#facebook" class="contact__facebook">
         <img src="image/fb-logo.png" alt="facebook logo">
         <span>Rejoignez-nous sur facebook</span>
-      </div>
+      </a>
     </section>
 
-    <a data-scroll href="#top" class="button-to-top _framed -hidden">
+    <a onclick="youScroll.to('#top').start()"# class="button-to-top _framed -hidden">
       <img src="image/ic_expand_more.svg" alt="">
     </a>
 
@@ -211,10 +270,11 @@
         displayButtonToTop();
       };
 
+
+
+
+
     </script>
-    <script type="text/javascript" src="js/smooth-scroll.min.js"></script>
-    <script>
-    	var scroll = new SmoothScroll('a[href*="#"]');
-    </script>
+    <script src="js/youscroll.min.js" charset="utf-8"></script>
   </body>
 </html>
