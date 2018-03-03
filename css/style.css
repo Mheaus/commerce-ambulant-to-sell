@@ -58,7 +58,7 @@ img {
 
 /* queries */
 
-@media only screen and (max-width: 30em) {
+@media only screen and (max-width: 32rem) {
   :root {
     font-size: 12px;
   }
@@ -70,12 +70,12 @@ img {
     min-width: 7em;
   }
 }
-@media only screen and (min-width: 30em) and (max-width: 45em){
+@media only screen and (min-width: 32rem) and (max-width: 48rem){
   nav .navigation-button {
     width: 8em;
   }
 }
-@media only screen and (max-width: 45em) {
+@media only screen and (max-width: 48rem) {
   header {
     grid-template-rows: repeat(2, calc(23vh - .5rem)) repeat(3, 1fr) .2fr;
   }
@@ -84,6 +84,9 @@ img {
   }
   nav .navigation-container__item {
     max-width: 10em;
+  }
+  header h1 {
+    display: none;
   }
   .life-selling {
     align-self: center;
@@ -110,7 +113,7 @@ img {
   .container-nav-annonce-items .__button-more {
     display: none;
   }
-  .annonces-container {
+  #annonces-container {
     height: 30rem;
     overflow: hidden;
     padding: 0 .75rem;
@@ -156,7 +159,7 @@ img {
 }
 
 @media
-  only screen and (min-width: 45em),
+  only screen and (min-width: 48rem),
   only screen and (orientation: landscape) {
     header {
       height: 99vh;
@@ -179,22 +182,9 @@ img {
       width: 115%;
     }
     .life-selling {
-      justify-self: right;
-      justify-content: space-around;
-      height: 75%;
-      max-height: 15rem;
-      max-width: 20rem;
-      font-size: 1.25rem;
+      display: none !important;
     }
-    .life-selling:first-of-type {
-      align-self: flex-end;
-      margin-bottom: 2.5vh;
-      grid-row: span 1;
-    }
-    .life-selling:nth-of-type(2) {
-      align-self: flex-start;
-      margin-top: 2.5vh;
-    }
+
     p.catchphrase {
       display: none;
     }
@@ -227,7 +217,7 @@ img {
     .container-nav-annonce-items .__button-more {
       display: flex;
     }
-    .annonces-container {
+    #annonces-container {
       display: flex;
       flex-wrap: nowrap;
       justify-content: flex-start;
@@ -237,7 +227,7 @@ img {
       overflow-x: scroll;
       margin: 0 1.5em;
     }
-    .annonces-container::-webkit-scrollbar {
+    \#annonces\-container::-webkit-scrollbar {
       display: none;
     }
     .annonce-item {
@@ -294,6 +284,16 @@ img {
       grid-column-start: 1;
       padding: 1.5em 0;
     }
+}
+@media only screen and (min-width: 64rem) {
+  header h1 {
+    font-size: 3em !important;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  header h1 {
+    font-size: 3.5em !important;
+  }
 }
 
 /* locals */
@@ -365,7 +365,7 @@ header {
   font-family: var(--font-secondary);
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: .4fr .6fr;
   /* grid-template-rows: repeat(2, calc(25vh - .5rem)) repeat(3, 1fr); */
   min-height: 40rem;
   max-height: 70rem;
@@ -454,6 +454,21 @@ nav .navigation-container__item p {
 }
 nav .navigation-container__item.-hidden p {
   max-width: 0;
+}
+
+header h1 {
+  color: white;
+  font-size: 2.25em;
+  font-weight: lighter;
+  text-align: right;
+  grid-row: span 2;
+  align-self: center;
+  margin: 0 2.5rem 2rem 0;
+  letter-spacing: .05rem;
+  text-shadow: 0 .07rem .4rem rgba(0, 0, 0, 0.25);
+}
+header h1 span {
+  font-weight: bold;
 }
 
 .life-selling {
@@ -774,4 +789,30 @@ section#contact {
   font-size: 1.2rem;
   margin-left: .75rem;
   font-weight: bolder;
+}
+
+.-fadeUp {
+  animation: fadeUp ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+@keyframes fadeUp {
+  0%   {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

@@ -36,6 +36,7 @@
           </a>
         </ul>
       </nav>
+      <h1>Le meilleur<br>endroit pour <span>acquérir</span><br>un <span>commerce ambulant</span></h1>
       <div class="life-selling _framed">
         <p>Vous souhaitez acquérir un commerce ambulant ?</p>
         <hr>
@@ -63,7 +64,7 @@
             <use stroke="#979797" xlink:href="#a" transform="rotate(90 6.259 6.259)"  fill-rule="evenodd"/>
           </svg>
         </div>
-        <div class="annonces-container">
+        <div id="annonces-container">
           <a class="annonce-item" id="annonce-item1">
             <img src="image/placeholder1.png" alt="photo annonce 1">
             <div class="__info-container">
@@ -270,7 +271,19 @@
         displayButtonToTop();
       };
 
+      const buttonsMore = document.querySelectorAll(".__button-more");
+      const annoncesContainer = document .querySelector("#annonces-container");
 
+      function slideAnnonceContainer() {
+        if (this.classList.contains("_right")) {
+          
+        }
+      }
+
+      buttonsMore.forEach(button => button.addEventListener("click", slideAnnonceContainer));
+
+      // when .__button-more.onclick if .annonce-item:first-of-type isInViewport buttonMoreLeft.classList.toggle('_off')
+      // when .__button-more.onclick if .annonce-item:last-of-type isInViewport buttonMoreRight.classList.toggle('_off')
 
 
 
